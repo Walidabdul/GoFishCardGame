@@ -93,6 +93,7 @@ h1 {
     font-size: 24px;
     color: rgba(0, 0, 0, 1);
 }
+
 /* TODO: Add styles for card corners, suits, and values */
 .card-corner {
     position: absolute;
@@ -139,12 +140,49 @@ h1 {
     color: red; /* Red for hearts and diamonds */
 }
 
+/* Deck Area */
 #deck-area {
     display: flex;
     justify-content: center;
     gap: 60px;
     margin: 40px 0;
 }
+
+#deck {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+#deck:hover {
+    transform: rotateY(180deg);
+}
+
+#discard-pile {
+    position: relative;
+}
+
+#discard-pile::after {
+    content: 'Discard';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+/* Keyframe animations for card dealing and effects */
+@keyframes dealCard {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(0.1); /* Initial state for card dealing */
+        opacity: 0; /* Start fully transparent */
+    }
+    100% {
+        transform: translate(0, 0) rotate(720deg) scale(1); /* End state after dealing */
+        opacity: 1; /* Fully opaque */
+    } 
+}
+
 
 /* TODO: Add styles for rules section */
 
