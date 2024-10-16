@@ -202,6 +202,7 @@ h1 {
 #rules ol {
     padding-left: 20px;
 }
+
 /* TODO: Add styles for end game section */
 
 footer {
@@ -211,6 +212,7 @@ footer {
 }
 
 /* TODO: Add keyframe animations */
+
 @keyframes slideIn {
     from {
         transform: translateX(-100%); /* Start off-screen to the left */
