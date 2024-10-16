@@ -185,7 +185,23 @@ h1 {
 
 
 /* TODO: Add styles for rules section */
+#rules {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+	animation: slideIn 0.5s ease-out forwards;
+}
 
+#rules h2 {
+    color: var(--accent-color); 
+    margin-bottom: 20px; 
+}
+
+#rules ol {
+    padding-left: 20px;
+}
 /* TODO: Add styles for end game section */
 
 footer {
