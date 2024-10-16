@@ -4,6 +4,8 @@
     --primary-color: #4a4a4a;
     --secondary-color: #f0f0f0;
     --accent-color: #3498db;
+    --winner-color: #2ecc71;
+    --loser-color: #e74c3c;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #game-container {
@@ -24,6 +28,10 @@ body {
     padding: 30px;
     max-width: 900px;
     width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1 {
