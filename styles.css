@@ -34,6 +34,11 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+#game-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
 h1 {
     text-align: center;
     color: #ecf0f1;
@@ -68,11 +73,26 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-.card.back {
-    background: linear-gradient(45deg, #3498db, #2980b9);
+.card:hover {
+    transform: translateY(-20px) rotateY(10deg); 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4); 
 }
 
+.card.back {
+    background: linear-gradient(45deg, #3498db, #2980b9); /* Back of the card */
+    background-size: 10px 10px;
+    color: transparent; /* Ensure text on back is hidden */
+}
 /* TODO: Add styles for card corners, suits, and values */
+.card.back::before {
+    content: '♠♥♣♦'; /* Placeholder for back of card symbols */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+}
 
 #deck-area {
     display: flex;
