@@ -83,7 +83,7 @@ h1 {
     background-size: 10px 10px;
     color: transparent; /* Ensure text on back is hidden */
 }
-/* TODO: Add styles for card corners, suits, and values */
+
 .card.back::before {
     content: '♠♥♣♦'; /* Placeholder for back of card symbols */
     position: absolute;
@@ -92,6 +92,51 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 24px;
     color: rgba(0, 0, 0, 1);
+}
+/* TODO: Add styles for card corners, suits, and values */
+.card-corner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.top-left {
+    top: 5px;
+    left: 5px;
+}
+
+.bottom-right {
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(180deg);
+}
+
+.card-value {
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Card Suit */
+.card-suit {
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* Color the suits and corresponding card values */
+.card-suit[data-suit="♠"],
+.card-suit[data-suit="♣"],
+.card-value[data-suit="♠"],
+.card-value[data-suit="♣"] {
+    color: black; /* Black for spades and clubs */
+}
+
+.card-suit[data-suit="♥"],
+.card-suit[data-suit="♦"],
+.card-value[data-suit="♥"],
+.card-value[data-suit="♦"] {
+    color: red; /* Red for hearts and diamonds */
 }
 
 #deck-area {
