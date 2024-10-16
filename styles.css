@@ -211,3 +211,13 @@ footer {
 }
 
 /* TODO: Add keyframe animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully opaque */
+    }
+}
