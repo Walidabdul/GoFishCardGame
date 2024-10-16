@@ -1,0 +1,86 @@
+:root {
+    --card-width: 100px;
+    --card-height: 140px;
+    --primary-color: #4a4a4a;
+    --secondary-color: #f0f0f0;
+    --accent-color: #3498db;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    background-color: rgba(52, 73, 94, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #ecf0f1;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.nav-button, button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.card.back {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+/* TODO: Add styles for card corners, suits, and values */
+
+#deck-area {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+}
+
+/* TODO: Add styles for rules section */
+
+/* TODO: Add styles for end game section */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* TODO: Add keyframe animations */
