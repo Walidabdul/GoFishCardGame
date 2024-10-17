@@ -26,6 +26,7 @@ body {
     background-color: rgba(52, 73, 94, 0.8);
     border-radius: 20px;
     padding: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     max-width: 900px;
     width: 100%;
     position: relative;
@@ -39,23 +40,36 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-h1 {
+header h1 {
     text-align: center;
     color: #ecf0f1;
-    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 3em;
     margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .nav-button, button {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     background-color: var(--accent-color);
     color: white;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .hand {
@@ -203,12 +217,19 @@ h1 {
     padding-left: 20px;
 }
 
+#rules li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
 /* TODO: Add styles for end game section */
 
 footer {
     text-align: center;
     margin-top: 40px;
+    padding-top: 20px;
     font-size: 14px;
+    color: var(--secondary-color);
 }
 
 /* TODO: Add keyframe animations */
