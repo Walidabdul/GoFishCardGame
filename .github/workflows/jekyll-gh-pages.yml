@@ -37,7 +37,10 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          
+
+      - name: Create _site directory if it doesn't exist
+        run: mkdir -p ./_site/CSS_Card_Crafters
+        
       - name: Copy CSS files
         run: cp -r CSS_Card_Crafters ./_site/CSS_Card_Crafters
         
