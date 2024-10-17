@@ -32,14 +32,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
-      - name: Copy CSS files
-        run: cp -r CSS_Card_Crafters ./_site/CSS_Card_Crafters
-        
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+          
+      - name: Copy CSS files
+        run: cp -r CSS_Card_Crafters ./_site/CSS_Card_Crafters
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
