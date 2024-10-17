@@ -48,6 +48,17 @@ header h1 {
     margin-bottom: 30px;
 }
 
+.pulse-animation {
+    animation: titlePulse 2s infinite;
+}
+
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -224,6 +235,36 @@ nav ul {
 
 /* TODO: Add styles for end game section */
 
+.end-game {
+    background: radial-gradient(circle, #3498db, #2c3e50);
+    padding: 20px;
+    border-radius: 10px;
+	text-align: center;
+}
+
+.end-game-container {
+    text-align: center;
+	
+}
+
+#winner-announcement {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--winner-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#score-display {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+#end-game-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
 footer {
     text-align: center;
     margin-top: 40px;
@@ -231,7 +272,6 @@ footer {
     font-size: 14px;
     color: var(--secondary-color);
 }
-
 /* TODO: Add keyframe animations */
 
 @keyframes slideIn {
