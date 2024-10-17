@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Over</title>
+    <title>Go Fish Card Game - Game Over</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<div id="game-container" class="end-game-container">
-        <div>
-            <h1 id="game-over">Game Over!</h1>
-        </div>
+        <header>
+            <h1 class="pulse-animation">Game Over!</h1>
+        </header>
 
         <main>
             <section id="game-results">
-                <h2 id="winner-announcement">Congratulations, You Win!</h2>
-
+                <h2 id="winner-announcement" class="pulse-animation">Congratulations, You Win!</h2>
                 <div id="score-display">
                     <p>Your Score: <span id="player-score">10</span></p>
                     <p>Opponent's Score: <span id="opponent-score">8</span></p>
@@ -23,8 +22,8 @@
             </section>
 
             <section id="end-game-actions">
-                <a href="game.html" class="nav-button">Play Again</a>
-                <a href="index.html" class="nav-button">Back to Home</a>
+                <a href="game.html" class="nav-button pulse-animation">Play Again</a>
+                <a href="index.html" class="nav-button pulse-animation">Back to Home</a>
             </section>
         </main>
 
